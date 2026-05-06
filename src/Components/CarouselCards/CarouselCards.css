@@ -1,0 +1,178 @@
+.carousel-section {
+    padding: 80px 0;
+    background: #0d0d0d;
+    overflow: hidden;
+}
+
+.carousel-header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+}
+
+.carousel-tag {
+    color: #2FBF8A;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.carousel-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+    padding: 20px 0;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); 
+    }
+}
+
+.carousel-card {
+    width: 220px;
+    height: 300px;
+    flex-shrink: 0;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.carousel-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card-front {
+    overflow: hidden;
+}
+
+.card-number {
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(47, 191, 138, 0.15);
+    line-height: 1;
+    position: absolute;
+    user-select: none;
+}
+
+.card-info {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.card-team {
+    display: block;
+    color: #2FBF8A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.card-year {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.card-hover-hint {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: #2FBF8A;
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    gap: 12px;
+}
+
+.card-back-team {
+    color: #2FBF8A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.card-player {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card-desc {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.card-btn {
+    background: #2FBF8A;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    transition: background 0.2s;
+}
+
+.card-btn:hover {
+    background: #1A9E6E;
+}

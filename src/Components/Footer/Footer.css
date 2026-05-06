@@ -1,0 +1,128 @@
+.footer {
+    background: #080808;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.footer-logo-icon {
+    background: #2FBF8A;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo-icon i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.footer-logo-brand {
+    color: #2FBF8A;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer-logo-sub {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.footer-brand-desc {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 300px;
+}
+
+.footer-col-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-list a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-list a:hover {
+    color: #2FBF8A;
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-contact-list i {
+    color: #2FBF8A;
+    font-size: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-contact-list span {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2a2a2a;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+}
+
+.footer-copy {
+    color: #555;
+    font-size: 13px;
+}

@@ -1,0 +1,120 @@
+.stats-section {
+    background: #0d0d0d;
+    padding: 80px 24px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.stats-header {
+    max-width: 600px;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.stats-tag {
+    color: #2FBF8A;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.stats-title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.stats-desc {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* GRID */
+.stats-grid {
+    max-width: 1200px;
+    margin: 0 auto 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.stat-card {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 36px 24px;
+    text-align: center;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(47,191,138,0.04), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.stat-card:hover {
+    border-color: #2FBF8A;
+    transform: translateY(-4px);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    background: #1a3d30;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: background 0.25s;
+}
+
+.stat-card:hover .stat-icon {
+    background: #2FBF8A;
+}
+
+.stat-icon i {
+    font-size: 24px;
+    color: #2FBF8A;
+    transition: color 0.25s;
+}
+
+.stat-card:hover .stat-icon i {
+    color: #fff;
+}
+
+.stat-value {
+    color: #2FBF8A;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.stat-desc {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+}
