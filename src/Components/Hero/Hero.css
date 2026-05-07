@@ -61,3 +61,43 @@
     z-index: 12312;
 }
 
+/* TABLET */
+@media (max-width: 768px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .hero-desc {
+        max-width: 100%;
+    }
+
+    .hero-img {
+        object-position: 70% top;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 100dvh;
+    }
+
+    .hero-inner {
+        padding: 0 16px;
+    }
+
+    .hero-tag {
+        font-size: 10px;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+    }
+
+    .hero-img {
+        object-position: 80% top;
+        opacity: 0.3;
+    }
+}

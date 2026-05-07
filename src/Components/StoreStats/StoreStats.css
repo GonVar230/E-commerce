@@ -118,3 +118,43 @@
     font-size: 13px;
     line-height: 1.6;
 }
+
+/* TABLET */
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 60px 24px;
+    }
+
+    .stats-header {
+        margin-bottom: 40px;
+    }
+
+    .stats-title {
+        font-size: 26px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 40px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .stats-section {
+        padding: 48px 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .stat-value {
+        font-size: 36px;
+    }
+
+    .stats-title {
+        font-size: 22px;
+    }
+}
