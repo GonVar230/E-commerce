@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "name": "Camiseta Home Maradona",
+        "player": "Diego Maradona",
+        "team": "Argentina",
+        "year": 1986,
+        "tournament": "Mundial México 1986",
+        "price": 4500,
+        "description": "En un partido contra Inglaterra, el mundo presenció dos goles que definieron una era. Primero la mano, después la gambeta más larga de la historia. Ninguna camiseta carga con tanto peso histórico como esta.",
+        "stock": 4,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones"
+    },
+    {
+        "id": 2,
+        "name": "Camiseta Home Forlán",
+        "player": "Diego Forlán",
+        "team": "Uruguay",
+        "year": 2010,
+        "tournament": "Mundial Sudáfrica 2010",
+        "price": 3900,
+        "description": "Sudáfrica 2010 fue el escenario del mejor jugador del torneo. La celeste uruguaya volvió a rugir en un mundial después de décadas y esta camiseta es el símbolo de ese regreso glorioso al podio del fútbol mundial.",
+        "stock": 5,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones"
+    },
+    {
+        "id": 3,
+        "name": "Camiseta Away Henry",
+        "player": "Thierry Henry",
+        "team": "Arsenal",
+        "year": 2006,
+        "tournament": "Temporada 2005-06",
+        "price": 4200,
+        "description": "La temporada en que el Arsenal llegó a la final de Champions con una camiseta visitante que se volvió legendaria. Amarilla, audaz y diferente, igual que el equipo que la usó.",
+        "stock": 3,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "clubes"
+    },
+    {
+        "id": 4,
+        "name": "Camiseta Home Park Ji-Sung",
+        "player": "Park Ji-Sung",
+        "team": "Corea del Sur",
+        "year": 2002,
+        "tournament": "Mundial Corea-Japón 2002",
+        "price": 3700,
+        "description": "El mundial que nadie esperaba y que Corea del Sur convirtió en una fiesta histórica. Semifinalistas en casa, con un estadio entero vestido de rojo. Una camiseta que representa una de las mayores sorpresas de la historia del fútbol.",
+        "stock": 6,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones"
+    },
+    {
+        "id": 5,
+        "name": "Camiseta Away Kaká Manga Larga",
+        "player": "Kaká",
+        "team": "AC Milan",
+        "year": 2007,
+        "tournament": "Final Champions League 2007",
+        "price": 5100,
+        "description": "Atenas, 2007. El Milan venció al Liverpool en la final de Champions y Kaká fue el alma del equipo esa noche. La manga larga visitante que usó ese año se convirtió en una de las piezas más buscadas por coleccionistas de todo el mundo.",
+        "stock": 2,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "clubes"
+    },
+    {
+        "id": 6,
+        "name": "Camiseta Home Messi",
+        "player": "Lionel Messi",
+        "team": "FC Barcelona",
+        "year": 2009,
+        "tournament": "Final Champions League 2009",
+        "price": 5500,
+        "description": "Roma, 2009. El Barcelona de Guardiola desplegó el mejor fútbol que el mundo había visto y aplastó al Manchester United en la final. La camiseta azulgrana de esa noche es un pedazo del fútbol total.",
+        "stock": 3,
+        "images": [
+            "", 
+            "",
+            ""
+        ],
+        "category": "clubes"
+    },
+    {
+        "id": 7,
+        "name": "Camiseta Home Nakata",
+        "player": "Hidetoshi Nakata",
+        "team": "Japón",
+        "year": 1998,
+        "tournament": "Mundial Francia 1998",
+        "price": 3800,
+        "description": "Francia 1998 fue la primera vez que Japón pisó un Mundial. Nakata llegó con una camiseta azul y un fútbol que sorprendió a Europa entera. El inicio de una era para el fútbol asiático.",
+        "stock": 4,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones"
+    },
+    {
+        "id": 8,
+        "name": "Camiseta Home Neymar",
+        "player": "Neymar Jr.",
+        "team": "Santos FC",
+        "year": 2011,
+        "tournament": "Temporada 2011",
+        "price": 4100,
+        "description": "Antes de Europa, antes de la fama global, Neymar brilló en el Santos con una camiseta blanca que se convirtió en símbolo de una promesa cumplida. La joya brasileña que el mundo empezaba a descubrir.",
+        "stock": 5,
+        "images": [
+            "",
+            "", 
+            ""
+        ],
+        "category": "clubes"
+    },
+    {
+        "id": 9,
+        "name": "Camiseta Home Shearer",
+        "player": "Alan Shearer",
+        "team": "Newcastle United",
+        "year": 1995,
+        "tournament": "Temporada 1995-96",
+        "price": 3600,
+        "description": "El año en que Newcastle casi le arrebató la Premier al Manchester United con un fútbol arrollador. La camiseta a rayas negras y blancas de ese equipo irrepetible es hoy una de las más codiciadas de los años 90.",
+        "stock": 4,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "clubes"
+    },
+    {
+        "id": 10,
+        "name": "Camiseta Home Zidane",
+        "player": "Zinedine Zidane",
+        "team": "Francia",
+        "year": 2002,
+        "tournament": "Mundial Corea-Japón 2002",
+        "price": 4300,
+        "description": "La camiseta del campeón del mundo que llegó a defender su corona. Francia 2002 fue una historia de contraste, la de un equipo que llegó como favorito y cayó antes de tiempo. Una camiseta que guarda el misterio de lo que pudo haber sido.",
+        "stock": 3,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones"
+    },
+    {
+        "id": 11,
+        "name": "Camiseta Home Cannavaro",
+        "player": "Fabio Cannavaro",
+        "team": "Italia",
+        "year": 2006,
+        "tournament": "Mundial Alemania 2006",
+        "price": 4400,
+        "description": "Berlín, 2006. Italia levantó su cuarta estrella con una defensa que no dejó pasar nada. Cannavaro alzó la copa como capitán y ese verano la azzurra se convirtió en sinónimo de solidez y carácter. Una camiseta que huele a campeón.",
+        "stock": 4,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones"
+    }   
+]
