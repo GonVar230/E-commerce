@@ -14,7 +14,8 @@
             "", 
             ""
         ],
-        "category": "selecciones"
+        "category": "selecciones",
+        "confederation": "CONMEBOL"
     },
     {
         "id": 2,
@@ -31,7 +32,8 @@
             "", 
             ""
         ],
-        "category": "selecciones"
+        "category": "selecciones",
+        "confederation": "CONMEBOL"
     },
     {
         "id": 3,
@@ -48,7 +50,8 @@
             "", 
             ""
         ],
-        "category": "clubes"
+        "category": "clubes",
+        "confederation": "UEFA"
     },
     {
         "id": 4,
@@ -65,7 +68,8 @@
             "", 
             ""
         ],
-        "category": "selecciones"
+        "category": "selecciones",
+        "confederation": "AFC" 
     },
     {
         "id": 5,
@@ -82,7 +86,8 @@
             "", 
             ""
         ],
-        "category": "clubes"
+        "category": "clubes",
+        "confederation": "UEFA" 
     },
     {
         "id": 6,
@@ -99,7 +104,8 @@
             "",
             ""
         ],
-        "category": "clubes"
+        "category": "clubes",
+        "confederation": "UEFA" 
     },
     {
         "id": 7,
@@ -116,7 +122,8 @@
             "", 
             ""
         ],
-        "category": "selecciones"
+        "category": "selecciones",
+        "confederation": "AFC" 
     },
     {
         "id": 8,
@@ -133,7 +140,8 @@
             "", 
             ""
         ],
-        "category": "clubes"
+        "category": "clubes",
+        "confederation": "CONMEBOL"
     },
     {
         "id": 9,
@@ -150,7 +158,8 @@
             "", 
             ""
         ],
-        "category": "clubes"
+        "category": "clubes",
+        "confederation": "UEFA"
     },
     {
         "id": 10,
@@ -167,7 +176,8 @@
             "", 
             ""
         ],
-        "category": "selecciones"
+        "category": "selecciones",
+        "confederation": "UEFA" 
     },
     {
         "id": 11,
@@ -184,6 +194,43 @@
             "", 
             ""
         ],
-        "category": "selecciones"
-    }   
+        "category": "selecciones",
+        "confederation": "UEFA"
+    },
+    {
+        "id": 12,
+        "name": "Camiseta Home Ronaldinho",
+        "player": "Ronaldinho Gaúcho",
+        "team": "Brasil",
+        "year": 2002,
+        "tournament": "Mundial Corea-Japón 2002",
+        "price": 4800,
+        "description": "Corea-Japón 2002 fue el mundial de Ronaldinho. Una camiseta que se convirtió en sinónimo de alegría, gambeta y fútbol puro. El número 11 que enloquecía rivales con una sonrisa.",
+        "stock": 4,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones",
+        "confederation": "CONMEBOL"
+    },
+    {
+        "id": 13,
+        "name": "Camiseta Home Ibrahimović",
+        "player": "Zlatan Ibrahimović",
+        "team": "Suecia",
+        "year": 2004,
+        "tournament": "Eurocopa Portugal 2004",
+        "price": 4000,
+        "description": "Portugal 2004 fue la presentación de Zlatan ante Europa. La camiseta amarilla y azul de Suecia llevaba en su espalda un apellido que el mundo aprendería a pronunciar para siempre.",
+        "stock": 5,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "selecciones",
+        "confederation": "UEFA"
+    }
 ]
