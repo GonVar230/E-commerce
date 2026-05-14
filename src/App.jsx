@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar/NavBar'
 import { Routes, Route } from "react-router-dom"
 import Footer from './Components/Footer/Footer'
 import Home from './Components/Home/Home'
+import NotFound from './Components/NotFound/NotFound'
 
 function App() {
   return (
@@ -12,13 +13,10 @@ function App() {
       <NavBar />
       
       <Routes>
-        <Route path="/" element={
-          <>
-            <Home />
-          </>  
-        } />
-        <Route path="/productos" element={<div>Productos</div>} />
-        <Route path="/contacto" element={<div>Contacto</div>} />
+        <Route path="/" element={<><Home /></>  } />
+        <Route path="/productos" element={<></>} />
+        <Route path="/ayuda" element={<></>} />
+        <Route path="/*" element={<> <NotFound /> </> } />
       </Routes>
 
       <Footer />

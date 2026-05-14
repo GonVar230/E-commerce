@@ -1,3 +1,5 @@
+import NavDropdown from "../NavDropdown/NavDropdown";
+import SearchBar from "../SearchBar/SearchBar";
 import "./NavBar.css"
 import { NavLink } from 'react-router-dom'
 
@@ -19,11 +21,12 @@ const NavBar = () => {
 
                 <div className="nav-links">
                     <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Inicio</NavLink>
-                    <NavLink to="/productos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Productos</NavLink>
-                    <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contacto</NavLink>
+                    <NavDropdown />
+                    <NavLink to="/ayuda" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Ayuda</NavLink>
                 </div>
 
                 <div className="nav-action">
+                    <SearchBar />
                     <button className="nav-btn cart-btn">
                         <i className="bi bi-cart2"></i>
                     </button>
