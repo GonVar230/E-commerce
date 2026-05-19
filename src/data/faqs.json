@@ -1,0 +1,81 @@
+[
+    {
+        "id": 1,
+        "category": "Envíos",
+        "icon": "bi-truck",
+        "questions": [
+            {
+                "q": "¿Cómo rastro mi pedido?",
+                "a": "Una vez despachado tu pedido vas a recibir un email con el número de seguimiento."
+            },
+            {
+                "q": "¿Cuánto tarda en llegar?",
+                "a": "Los envíos nacionales tardan entre 3 y 7 días hábiles."
+            },
+            {
+                "q": "¿Cuánto cuesta el envío?",
+                "a": "El costo del envío varía según tu ubicación, entre $350 y $600."
+            },
+            {
+                "q": "¿Hacen envíos internacionales?",
+                "a": "Estamos trabajando para incorporar envíos internacionales próximamente."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Devoluciones",
+        "icon": "bi-arrow-counterclockwise",
+        "questions": [
+            {
+                "q": "¿Cómo cancelo un pedido?",
+                "a": "Podés cancelar dentro de las 24hs escribiéndonos por WhatsApp o email."
+            },
+            {
+                "q": "¿Puedo devolver un jersey?",
+                "a": "Sí, dentro de los 30 días de recibido, sin uso y con etiquetas originales."
+            },
+            {
+                "q": "¿Cómo realizo un reclamo?",
+                "a": "Contactanos desde la sección de contacto indicando tu número de orden y el problema."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Autenticidad",
+        "icon": "bi-patch-check",
+        "questions": [
+            {
+                "q": "¿Cómo sé que el jersey es original?",
+                "a": "Todos nuestros jerseys vienen con certificado de autenticidad y pasan por un control de calidad."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Guía de tallas",
+        "icon": "bi-rulers",
+        "questions": [
+            {
+                "q": "¿Cómo elijo mi talla?",
+                "a": "Las camisetas vintage tienen tallados distintos. Si tenés dudas escribinos y te asesoramos."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Pagos",
+        "icon": "bi-credit-card",
+        "questions": [
+            {
+                "q": "¿Qué métodos de pago aceptan?",
+                "a": "Aceptamos Visa, Mastercard, MercadoPago, transferencia bancaria y PayPal."
+            },
+            {
+                "q": "¿Puedo pagar en cuotas?",
+                "a": "Sí, ofrecemos 3 y 6 cuotas sin interés con tarjetas seleccionadas."
+            }
+        ]
+    }
+]

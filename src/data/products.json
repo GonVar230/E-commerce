@@ -232,5 +232,55 @@
         ],
         "category": "selecciones",
         "confederation": "UEFA"
+    },
+    {
+        "id": 14,
+        "name": "Camiseta Home Suárez",
+        "player": "Luis Suárez",
+        "team": "Liverpool",
+        "year": 2014,
+        "tournament": "Premier League 2013-14",
+        "price": 4300,
+        "description": "La temporada en que Liverpool casi toca el cielo. A un resbalón de ser campeones, Suárez fue el alma de un equipo que enamoró al mundo entero con un fútbol irreverente y apasionado.",
+        "stock": 4,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "clubes",
+        "confederation": "UEFA"
+    },
+    {
+        "id": 15,
+        "name": "Camiseta Home Cruyff",
+        "player": "Johan Cruyff",
+        "team": "Ajax",
+        "year": 1971,
+        "tournament": "Copa de Europa 1971",
+        "price": 5800,
+        "description": "Amsterdam, años 70. El Ajax de Cruyff inventó el fútbol total y esta camiseta es su manifiesto. Tres rayas, once jugadores que pensaban como uno solo y una filosofía que cambió el deporte para siempre.",
+        "stock": 2,
+        "images": [
+            "", 
+            "", 
+            ""
+        ],
+        "category": "clubes",
+        "confederation": "UEFA"
+    },  
+    {
+        "id": 16,
+        "name": "Camiseta Home Kroos",
+        "player": "Toni Kroos",
+        "team": "Real Madrid",
+        "year": 2016,
+        "tournament": "Final Champions League 2016",
+        "price": 4900,
+        "description": "Milán, 2016. El Real Madrid conquistó su undécima Champions con una camiseta blanca inmaculada. Kroos fue el metrónomo de un equipo que parecía no tener techo. La Undécima grabada para siempre en blanco.",
+        "stock": 3,
+        "images": ["", "", ""],
+        "category": "clubes",
+        "confederation": "UEFA"
     }
 ]
