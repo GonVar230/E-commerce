@@ -1,0 +1,69 @@
+import { useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import products from '../../data/products.json'
+import './ItemDetailContainer.css'
+
+const ItemDetailContainer = () => {
+    const { id } = useParams()
+    const [selectedImg, setSelectedImg] = useState(0)
+    const product = products.find(p => p.id === parseInt(id))
+
+    if (!product) return null
+
+    return (
+        <section className="detail-section">
+            <div className="detail-inner">
+
+                <Link to="/productos" className="detail-back">
+                    <i className="bi bi-arrow-left"></i> Volver a productos
+                </Link>
+
+                <div className="detail-grid">
+
+                    <div className="detail-images">
+                        <div className="detail-main-img">
+                            {product.images[selectedImg]
+                                ? <img src={product.images[selectedImg]} alt={product.name} />
+                                : <div className="detail-img-placeholder"><i className="bi bi-image"></i></div>
+                            }
+                        </div>
+                        <div className="detail-thumbnails">
+                            {product.images.map((img, i) => (
+                                <div
+                                    key={i}
+                                    className={`detail-thumb ${selectedImg === i ? 'active' : ''}`}
+                                    onClick={() => setSelectedImg(i)}
+                                >
+                                    <img src={img} alt={`${product.name} ${i + 1}`} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="detail-info">
+                        <span className="detail-team">{product.team}</span>
+                        <h1 className="detail-name">{product.name}</h1>
+                        <span className="detail-tournament">
+                            <i className="bi bi-trophy"></i> {product.tournament}
+                        </span>
+                        <p className="detail-desc">{product.description}</p>
+                        <div className="detail-tags">
+                            <span className="detail-tag"><i className="bi bi-globe"></i> {product.confederation}</span>
+                            <span className="detail-tag"><i className="bi bi-calendar3"></i> {product.year}</span>
+                            <span className="detail-tag">
+                                <i className="bi bi-box"></i> {product.stock} disponibles
+                            </span>
+                        </div>
+                        <div className="detail-price">${product.price.toLocaleString('es-UY')}</div>
+                        <button className="detail-btn">
+                            <i className="bi bi-bag-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default ItemDetailContainer;

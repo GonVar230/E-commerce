@@ -1,0 +1,26 @@
+.ilc-section {
+    background: #0d0d0d;
+    padding: 60px 24px 80px;
+    min-height: 80vh;
+}
+
+.ilc-header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.ilc-tag {
+    color: #2FBF8A;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ilc-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}

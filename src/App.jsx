@@ -6,6 +6,8 @@ import Footer from './Components/Footer/Footer'
 import Home from './Components/Home/Home'
 import NotFound from './Components/NotFound/NotFound'
 import Help from './Components/Help/Help'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       
       <Routes>
         <Route path="/" element={<><Home /></>  } />
-        <Route path="/productos" element={<></>} />
+        <Route path="/productos" element={<ItemListContainer />} />
+        <Route path="/productos/:id" element={<ItemDetailContainer />} />
         <Route path="/ayuda" element={<><Help /></>} />
         <Route path="/*" element={<> <NotFound /> </> } />
       </Routes>
