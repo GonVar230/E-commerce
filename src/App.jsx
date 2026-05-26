@@ -8,6 +8,8 @@ import NotFound from './Components/NotFound/NotFound'
 import Help from './Components/Help/Help'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
+import Cart from './Components/Cart/Cart'
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/productos" element={<ItemListContainer />} />
         <Route path="/productos/:id" element={<ItemDetailContainer />} />
         <Route path="/ayuda" element={<><Help /></>} />
+        <Route path="/carrito" element={<Cart />} />
         <Route path="/*" element={<> <NotFound /> </> } />
       </Routes>
 

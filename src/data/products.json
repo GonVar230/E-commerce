@@ -1,20 +1,21 @@
 [
     {
         "id": 1,
-        "name": "Me falta 1",
-        "player": "No se",
-        "team": "River",
-        "year": 2001,
-        "tournament": "En la B",
+        "name": "Camiseta Home Falcao",
+        "player": "Radamel Falcao",
+        "team": "Atlético de Madrid",
+        "year": 2013,
+        "tournament": "Temporada 2012-13",
         "price": 4500,
-        "description": "Perdiste contra Belgrano 2011",
+        "description": "La temporada en que el Tigre rugió más fuerte que nunca. Falcao convirtió al Atlético en una pesadilla para toda Europa con una camiseta rojiblanca que olía a gol en cada partido. Una era dorada antes de la partida.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
-            "",
-            ""
+            "/src/assets/Falcao-2013/Falcao-2013-frente.png",
+            "/src/assets/Falcao-2013/Falcao-2013-atras.png"
         ],
         "category": "clubes",
-        "confederation": "CONMEBOL"
+        "confederation": "UEFA"
     },
     {
         "id": 2,
@@ -26,6 +27,7 @@
         "price": 3900,
         "description": "Sudáfrica 2010 fue el escenario del mejor jugador del torneo. La celeste uruguaya volvió a rugir en un mundial después de décadas y esta camiseta es el símbolo de ese regreso glorioso al podio del fútbol mundial.",
         "stock": 5,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Forlan-2010/Forlan-2010-frente.png",
             "/src/assets/Forlan-2010/Forlan-2010-atras.png"
@@ -43,6 +45,7 @@
         "price": 4200,
         "description": "La temporada en que el Arsenal llegó a la final de Champions con una camiseta visitante que se volvió legendaria. Amarilla, audaz y diferente, igual que el equipo que la usó.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Henry-2006/Henry-2006-frente.png",
             "/src/assets/Henry-2006/Henry-2006-atras.png"
@@ -60,6 +63,7 @@
         "price": 3700,
         "description": "El mundial que nadie esperaba y que Corea del Sur convirtió en una fiesta histórica. Semifinalistas en casa, con un estadio entero vestido de rojo. Una camiseta que representa una de las mayores sorpresas de la historia del fútbol.",
         "stock": 6,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/JSPark-2002/JSPark-2002-frente.png",
             "/src/assets/JSPark-2002/JSPark-2002-atras.png"
@@ -77,6 +81,7 @@
         "price": 5100,
         "description": "Atenas, 2007. El Milan venció al Liverpool en la final de Champions y Kaká fue el alma del equipo esa noche. La manga larga visitante que usó ese año se convirtió en una de las piezas más buscadas por coleccionistas de todo el mundo.",
         "stock": 2,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Kaka-2007/Kaka-2007-frente.png",
             "/src/assets/Kaka-2007/Kaka-2007-atras.png"
@@ -94,6 +99,7 @@
         "price": 5500,
         "description": "Roma, 2009. El Barcelona de Guardiola desplegó el mejor fútbol que el mundo había visto y aplastó al Manchester United en la final. La camiseta azulgrana de esa noche es un pedazo del fútbol total.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Messi-2009/Messi-2009-frente.png",
             "/src/assets/Messi-2009/Messi-2009-atras.png"
@@ -111,6 +117,7 @@
         "price": 3800,
         "description": "Francia 1998 fue la primera vez que Japón pisó un Mundial. Nakata llegó con una camiseta azul y un fútbol que sorprendió a Europa entera. El inicio de una era para el fútbol asiático.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Nakata-1998/Nakata-1998-frente.png",
             "/src/assets/Nakata-1998/Nakata-1998-atras.png"
@@ -128,6 +135,7 @@
         "price": 4100,
         "description": "Antes de Europa, antes de la fama global, Neymar brilló en el Santos con una camiseta blanca que se convirtió en símbolo de una promesa cumplida. La joya brasileña que el mundo empezaba a descubrir.",
         "stock": 5,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Neymar-2011/Neymar-2011-frente.png",
             "/src/assets/Neymar-2011/Neymar-2011-atras.png"
@@ -145,6 +153,7 @@
         "price": 3600,
         "description": "El año en que Newcastle casi le arrebató la Premier al Manchester United con un fútbol arrollador. La camiseta a rayas negras y blancas de ese equipo irrepetible es hoy una de las más codiciadas de los años 90.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Shearer-1995/Shearer-1995-frente.png",
             "/src/assets/Shearer-1995/Shearer-1995-atras.png"
@@ -162,6 +171,7 @@
         "price": 4300,
         "description": "La camiseta del campeón del mundo que llegó a defender su corona. Francia 2002 fue una historia de contraste, la de un equipo que llegó como favorito y cayó antes de tiempo. Una camiseta que guarda el misterio de lo que pudo haber sido.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Zidane-2002/Zidane-2002-frente.png",
             "/src/assets/Zidane-2002/Zidane-2002-atras.png"
@@ -179,6 +189,7 @@
         "price": 4400,
         "description": "Berlín, 2006. Italia levantó su cuarta estrella con una defensa que no dejó pasar nada. Cannavaro alzó la copa como capitán y ese verano la azzurra se convirtió en sinónimo de solidez y carácter. Una camiseta que huele a campeón.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Cannavaro-2006/Cannavaro-2006-frente.png",
             "/src/assets/Cannavaro-2006/Cannavaro-2006-atras.png"
@@ -196,6 +207,7 @@
         "price": 4800,
         "description": "Corea-Japón 2002 fue el mundial de Ronaldinho. Una camiseta amarilla que se convirtió en sinónimo de alegría, gambeta y fútbol puro. El número 11 que enloquecía rivales con una sonrisa.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Ronaldinho-2002/Ronaldinho-2002-frente.png",
             "/src/assets/Ronaldinho-2002/Ronaldinho-2002-atras.png"
@@ -213,6 +225,7 @@
         "price": 4000,
         "description": "Portugal 2004 fue la presentación de Zlatan ante Europa. La camiseta amarilla y azul de Suecia llevaba en su espalda un apellido que el mundo aprendería a pronunciar para siempre.",
         "stock": 5,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Zlatan-2004/Zlatan-2004-frente.png",
             "/src/assets/Zlatan-2004/Zlatan-2004-atras.png"
@@ -230,6 +243,7 @@
         "price": 4300,
         "description": "La temporada en que Liverpool casi toca el cielo. A un resbalón de ser campeones, Suárez fue el alma de un equipo que enamoró al mundo entero con un fútbol irreverente y apasionado.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Suarez-2013/Suarez-2013-frente.png",
             "/src/assets/Suarez-2013/Suarez-2013-atras.png"
@@ -247,6 +261,7 @@
         "price": 5800,
         "description": "Amsterdam, años 70. El Ajax de Cruyff inventó el fútbol total y esta camiseta es su manifiesto. Tres rayas, once jugadores que pensaban como uno solo y una filosofía que cambió el deporte para siempre.",
         "stock": 2,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Cruyff-1971/Cruyff-1971-frente.png",
             "/src/assets/Cruyff-1971/Cruyff-1971-atras.png"
@@ -264,6 +279,7 @@
         "price": 4900,
         "description": "Milán, 2016. El Real Madrid conquistó su undécima Champions con una camiseta blanca inmaculada. Kroos fue el metrónomo de un equipo que parecía no tener techo. La Undécima grabada para siempre en blanco.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Kroos-2016/Kroos-2016-frente.png",
             "/src/assets/Kroos-2016/Kroos-2016-atras.png"
@@ -281,6 +297,7 @@
         "price": 5200,
         "description": "Moscú, 2008. Manchester United conquistó Europa y Cristiano Ronaldo se consagró como el mejor del mundo. La camiseta roja del United de ese año es el símbolo del inicio de una era.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Cristiano-2007/CristianoRonaldo-2007-frente.png",
             "/src/assets/Cristiano-2007/CristianoRonaldo-2007-atras.png"
@@ -298,6 +315,7 @@
         "price": 6200,
         "description": "Munich, 1974. Alemania levantó la copa del mundo en casa con el Kaiser como capitán. La camiseta blanca con detalles negros de esa generación es una de las piezas más antiguas y codiciadas de nuestra colección.",
         "stock": 2,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Beckenbauer-1974/Beckenbauer-1974-frente.png",
             "/src/assets/Beckenbauer-1974/Beckenbauer-1974-atras.png"
@@ -315,6 +333,7 @@
         "price": 4600,
         "description": "Roma siempre fue Totti y Totti siempre fue Roma. La camiseta giallorossa del año en que el Príncipe lideró a su ciudad al Scudetto es un homenaje a la lealtad más grande que vio el fútbol moderno.",
         "stock": 4,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Totti-2001/Totti-2001-frente.png",
             "/src/assets/Totti-2001/Totti-2001-atras.png"
@@ -332,6 +351,7 @@
         "price": 4800,
         "description": "El checo que enamoró a Turín. Nedvěd fue el alma de la Juventus que llegó a la final de Champions del 2003 y esa temporada ganó el Balón de Oro. Una camiseta que lleva el peso de lo que pudo haber sido.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Nedved-2003/Nedved-2003-frente.png",
             "/src/assets/Nedved-2003/Nedved-2003-atras.png"
@@ -349,9 +369,10 @@
         "price": 5400,
         "description": "El Fenómeno volvió de las sombras para conquistar el mundo. Yokohama 2002, dos goles en la final, el corte de pelo más famoso de la historia y una camiseta amarilla que representa la resurrección más épica del fútbol.",
         "stock": 3,
+        "sizes": ["S", "M", "L", "XL"],
         "images": [
             "/src/assets/Nazario-2002/Nazario-2002-frente.png",
-            "/src/assets/Nazario-2002/Nazario 2002 atras.png"
+            "/src/assets/Nazario-2002/Nazario-2002-atras.png"
         ],
         "category": "selecciones",
         "confederation": "CONMEBOL"

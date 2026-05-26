@@ -1,0 +1,80 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    max-width: 380px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.modal-icon {
+    width: 64px;
+    height: 64px;
+    background: #1a3d30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.modal-icon i {
+    font-size: 28px;
+    color: #2FBF8A;
+}
+
+.modal-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.modal-product {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.modal-team {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.modal-price {
+    color: #2FBF8A;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.modal-btn {
+    background: #2FBF8A;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.modal-btn:hover {
+    background: #1A9E6E;
+}

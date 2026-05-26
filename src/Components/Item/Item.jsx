@@ -17,9 +17,9 @@ const Item = ({ product }) => {
                 <div className="item-footer">
                     <span className="item-price">${product.price.toLocaleString('es-UY')}</span>
                     <div className="item-actions">
-                        <button className="item-cart-btn">
+                        <Link to={`/productos/${product.id}`} className="item-cart-btn">
                             <i className="bi bi-bag-plus"></i>
-                        </button>
+                        </Link>
                         <Link to={`/productos/${product.id}`} className="item-detail-btn">
                             Ver detalles
                         </Link>

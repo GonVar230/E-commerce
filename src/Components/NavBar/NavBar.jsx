@@ -1,10 +1,12 @@
-import NavDropdown from "../NavDropdown/NavDropdown";
-import SearchBar from "../SearchBar/SearchBar";
+import NavDropdown from "../NavDropdown/NavDropdown"
+import SearchBar from "../SearchBar/SearchBar"
 import "./NavBar.css"
 import { NavLink } from 'react-router-dom'
+import { useCart } from '../../Context/useCart'
 
 const NavBar = () => {
-    
+    const { cart } = useCart()
+
     return (
         <nav className="navbar">
             <div className="nav-inner">
@@ -27,9 +29,10 @@ const NavBar = () => {
 
                 <div className="nav-action">
                     <SearchBar />
-                    <button className="nav-btn cart-btn">
+                    <NavLink to="/carrito" className="nav-btn cart-btn">
                         <i className="bi bi-cart2"></i>
-                    </button>
+                        {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+                    </NavLink>
                 </div>
 
             </div>
@@ -37,4 +40,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;
+export default NavBar

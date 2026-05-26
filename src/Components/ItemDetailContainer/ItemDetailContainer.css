@@ -171,6 +171,53 @@
     background: #1A9E6E;
 }
 
+.detail-sizes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-sizes-label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.detail-sizes-error {
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.detail-sizes-options {
+    display: flex;
+    gap: 10px;
+}
+
+.size-btn {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #aaa;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.size-btn:hover {
+    border-color: #2FBF8A;
+    color: #2FBF8A;
+}
+
+.size-btn.active {
+    background: #2FBF8A;
+    border-color: #2FBF8A;
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .detail-grid {
         grid-template-columns: 1fr;
