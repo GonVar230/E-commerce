@@ -32,19 +32,19 @@ const NavDropdown = () => {
 
                     <div className="dropdown-col">
                         <span className="dropdown-title">Selecciones</span>
-                        <NavLink to="/productos/selecciones" className="dropdown-link">TODAS</NavLink>
-                        <NavLink to="/productos/UEFA" className="dropdown-link">UEFA</NavLink>
-                        <NavLink to="/productos/CONMEBOL" className="dropdown-link">CONMEBOL</NavLink>
-                        <NavLink to="/productos/AFC" className="dropdown-link">AFC</NavLink>
+                        <NavLink to="/productos?cat=selecciones" className="dropdown-link" onClick={() => setDropOpen(false)}>Todas</NavLink>
+                        <NavLink to="/productos?cat=selecciones&conf=UEFA" className="dropdown-link" onClick={() => setDropOpen(false)}>UEFA</NavLink>
+                        <NavLink to="/productos?cat=selecciones&conf=CONMEBOL" className="dropdown-link" onClick={() => setDropOpen(false)}>CONMEBOL</NavLink>
+                        <NavLink to="/productos?cat=selecciones&conf=AFC" className="dropdown-link" onClick={() => setDropOpen(false)}>AFC</NavLink>
                     </div>
 
                     <div className="dropdown-divider"></div>
 
                     <div className="dropdown-col">
                         <span className="dropdown-title">Clubes</span>
-                        <NavLink to="/productos/clubes" className="dropdown-link">TODOS</NavLink>
-                        <NavLink to="/productos/UEFA" className="dropdown-link">UEFA</NavLink>
-                        <NavLink to="/productos/CONMEBOL" className="dropdown-link">CONMEBOL</NavLink>
+                        <NavLink to="/productos?cat=clubes" className="dropdown-link" onClick={() => setDropOpen(false)}>Todos</NavLink>
+                        <NavLink to="/productos?cat=clubes&conf=UEFA" className="dropdown-link" onClick={() => setDropOpen(false)}>UEFA</NavLink>
+                        <NavLink to="/productos?cat=clubes&conf=CONMEBOL" className="dropdown-link" onClick={() => setDropOpen(false)}>CONMEBOL</NavLink>
                     </div>
 
                 </div>
@@ -53,4 +53,4 @@ const NavDropdown = () => {
     )
 }
 
-export default NavDropdown
+export default NavDropdown;

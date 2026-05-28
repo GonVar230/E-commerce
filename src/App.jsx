@@ -9,6 +9,7 @@ import Help from './Components/Help/Help'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
 import Cart from './Components/Cart/Cart'
+import Checkout from './Components/Checkout/Checkout'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/productos/:id" element={<ItemDetailContainer />} />
         <Route path="/ayuda" element={<><Help /></>} />
         <Route path="/carrito" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/*" element={<> <NotFound /> </> } />
       </Routes>
 

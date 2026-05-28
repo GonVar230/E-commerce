@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+}
+
+.search-container {
+    position: relative;
 }
 
 .search-input {
@@ -22,4 +27,68 @@
 
 .search-input::placeholder {
     color: #555;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.search-suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.search-suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.search-suggestion-item:hover {
+    background: #1a1a1a;
+}
+
+.suggestion-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #0d0d0d;
+    padding: 2px;
+    flex-shrink: 0;
+}
+
+.suggestion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.suggestion-player {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.suggestion-team {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.suggestion-arrow {
+    color: #2FBF8A;
+    font-size: 14px;
 }

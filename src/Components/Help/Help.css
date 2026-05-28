@@ -84,12 +84,22 @@
 }
 
 @media (max-width: 768px) {
-    .faq-grid { grid-template-columns: 1fr; }
-    .faq-title { font-size: 26px; }
-    .faq-header { margin-bottom: 40px; }
+    .faq-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .faq-title { 
+        font-size: 26px; 
+    }
+    .faq-header { 
+        margin-bottom: 40px; 
+    }
 }
 
 @media (max-width: 480px) {
-    .faq-section { padding: 48px 16px; }
-    .faq-title { font-size: 22px; }
+    .faq-section { 
+        padding: 48px 16px; 
+    }
+    .faq-title { 
+        font-size: 22px; 
+    }
 }

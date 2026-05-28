@@ -1,10 +1,13 @@
 import { useCart } from '../../Context/useCart'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './Cart.css'
 
 const Cart = () => {
+    
     const { cart, removeFromCart } = useCart()
-
+    const navigate = useNavigate()
+    
     const total = cart.reduce((acc, item) => acc + item.price, 0)
 
     return (
@@ -42,7 +45,7 @@ const Cart = () => {
                                     </div>
                                     <div className="cart-item-right">
                                         <span className="cart-item-price">${item.price.toLocaleString('es-UY')}</span>
-                                        <button className="cart-item-remove" onClick={() => removeFromCart(item.id)}>
+                                        <button className="cart-item-remove" onClick={() => removeFromCart(item.id, item.size)}>
                                             <i className="bi bi-trash"></i>
                                         </button>
                                     </div>
@@ -55,7 +58,7 @@ const Cart = () => {
                                 <span>Total</span>
                                 <span className="cart-total-price">${total.toLocaleString('es-UY')}</span>
                             </div>
-                            <button className="cart-checkout-btn">
+                            <button className="cart-checkout-btn" onClick={() => navigate('/checkout')}>
                                 <i className="bi bi-bag-check"></i> Finalizar compra
                             </button>
                         </div>

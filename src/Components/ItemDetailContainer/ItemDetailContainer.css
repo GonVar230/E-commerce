@@ -218,6 +218,40 @@
     color: #fff;
 }
 
+.size-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    position: relative;
+    color: #555;
+    border-color: #2a2a2a;
+}
+
+.size-btn.disabled::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    right: 4px;
+    height: 1px;
+    background: #555;
+    transform: rotate(-20deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.detail-section {
+    animation: fadeIn 0.4s ease;
+}
+
 @media (max-width: 768px) {
     .detail-grid {
         grid-template-columns: 1fr;

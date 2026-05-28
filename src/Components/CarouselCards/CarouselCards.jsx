@@ -41,9 +41,6 @@ const CarouselCards = () => {
                                     <span className="card-back-team">{jersey.team}</span>
                                     <h3 className="card-player">{jersey.player}</h3>
                                     <p className="card-desc">{jersey.desc}</p>
-                                    {/* <button className="card-btn">
-                                        <i className="bi bi-bag-plus"></i> Ver jersey
-                                    </button> */}
                                 </div>
 
                             </div>
