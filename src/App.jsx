@@ -10,6 +10,7 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
 import Cart from './Components/Cart/Cart'
 import Checkout from './Components/Checkout/Checkout'
+import Payment from './Components/Payment/Payment'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/ayuda" element={<><Help /></>} />
         <Route path="/carrito" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/pago" element={<Payment />} />
         <Route path="/*" element={<> <NotFound /> </> } />
       </Routes>
 

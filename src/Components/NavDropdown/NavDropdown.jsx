@@ -17,6 +17,8 @@ const NavDropdown = () => {
         }, 200)
     }
 
+    const close = () => setDropOpen(false)
+
     return (
         <div
             className="nav-dropdown"
@@ -30,21 +32,29 @@ const NavDropdown = () => {
             {dropOpen && (
                 <div className="dropdown-menu">
 
-                    <div className="dropdown-col">
-                        <span className="dropdown-title">Selecciones</span>
-                        <NavLink to="/productos?cat=selecciones" className="dropdown-link" onClick={() => setDropOpen(false)}>Todas</NavLink>
-                        <NavLink to="/productos?cat=selecciones&conf=UEFA" className="dropdown-link" onClick={() => setDropOpen(false)}>UEFA</NavLink>
-                        <NavLink to="/productos?cat=selecciones&conf=CONMEBOL" className="dropdown-link" onClick={() => setDropOpen(false)}>CONMEBOL</NavLink>
-                        <NavLink to="/productos?cat=selecciones&conf=AFC" className="dropdown-link" onClick={() => setDropOpen(false)}>AFC</NavLink>
-                    </div>
+                    <NavLink to="/productos" className="dropdown-link-all" onClick={close}>
+                        <i className="bi bi-grid"></i> Ver todos
+                    </NavLink>
 
-                    <div className="dropdown-divider"></div>
+                    <div className="dropdown-divider-full"></div>
 
-                    <div className="dropdown-col">
-                        <span className="dropdown-title">Clubes</span>
-                        <NavLink to="/productos?cat=clubes" className="dropdown-link" onClick={() => setDropOpen(false)}>Todos</NavLink>
-                        <NavLink to="/productos?cat=clubes&conf=UEFA" className="dropdown-link" onClick={() => setDropOpen(false)}>UEFA</NavLink>
-                        <NavLink to="/productos?cat=clubes&conf=CONMEBOL" className="dropdown-link" onClick={() => setDropOpen(false)}>CONMEBOL</NavLink>
+                    <div className="dropdown-cols">
+                        <div className="dropdown-col">
+                            <span className="dropdown-title">Selecciones</span>
+                            <NavLink to="/productos?cat=selecciones" className="dropdown-link" onClick={close}>TODAS</NavLink>
+                            <NavLink to="/productos?cat=selecciones&conf=UEFA" className="dropdown-link" onClick={close}>UEFA</NavLink>
+                            <NavLink to="/productos?cat=selecciones&conf=CONMEBOL" className="dropdown-link" onClick={close}>CONMEBOL</NavLink>
+                            <NavLink to="/productos?cat=selecciones&conf=AFC" className="dropdown-link" onClick={close}>AFC</NavLink>
+                        </div>
+
+                        <div className="dropdown-divider"></div>
+
+                        <div className="dropdown-col">
+                            <span className="dropdown-title">Clubes</span>
+                            <NavLink to="/productos?cat=clubes" className="dropdown-link" onClick={close}>TODOS</NavLink>
+                            <NavLink to="/productos?cat=clubes&conf=UEFA" className="dropdown-link" onClick={close}>UEFA</NavLink>
+                            <NavLink to="/productos?cat=clubes&conf=CONMEBOL" className="dropdown-link" onClick={close}>CONMEBOL</NavLink>
+                        </div>
                     </div>
 
                 </div>

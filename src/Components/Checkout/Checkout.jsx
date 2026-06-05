@@ -1,65 +1,9 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useCart } from '../../Context/useCart'
+import useCheckout from '../../hooks/useCheckout'
 import './Checkout.css'
 
 const Checkout = () => {
-    const { cart } = useCart()
-    const total = cart.reduce((acc, item) => acc + item.price, 0)
-
-    const [form, setForm] = useState({
-        nombre: '',
-        apellido: '',
-        email: '',
-        telefono: '',
-        direccion: '',
-        ciudad: '',
-        pago: ''
-    })
-
-    const [errors, setErrors] = useState({})
-    const [submitted, setSubmitted] = useState(false)
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value })
-        setErrors({ ...errors, [e.target.name]: '' })
-    }
-
-    const validate = () => {
-        const newErrors = {}
-        if (!form.nombre)    newErrors.nombre    = 'Campo requerido'
-        if (!form.apellido)  newErrors.apellido  = 'Campo requerido'
-        if (!form.email)     newErrors.email     = 'Campo requerido'
-        if (!form.telefono)  newErrors.telefono  = 'Campo requerido'
-        if (!form.direccion) newErrors.direccion = 'Campo requerido'
-        if (!form.ciudad)    newErrors.ciudad    = 'Campo requerido'
-        if (!form.pago)      newErrors.pago      = 'Seleccioná un método de pago'
-        return newErrors
-    }
-
-    const handleSubmit = () => {
-        const newErrors = validate()
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors)
-            return
-        }
-        setSubmitted(true)
-    }
-
-    if (submitted) {
-        return (
-            <section className="checkout-section">
-                <div className="checkout-success">
-                    <div className="success-icon">
-                        <i className="bi bi-bag-check"></i>
-                    </div>
-                    <h2 className="success-title">¡Pedido confirmado!</h2>
-                    <p className="success-desc">Gracias {form.nombre}, te enviamos los detalles a {form.email}.</p>
-                    <Link to="/" className="success-btn">Volver al inicio</Link>
-                </div>
-            </section>
-        )
-    }
+    const { cart, total, form, errors, handleChange, handleContinue } = useCheckout()
 
     return (
         <section className="checkout-section">
@@ -160,8 +104,8 @@ const Checkout = () => {
                             <span>Total</span>
                             <span className="summary-total-price">${total.toLocaleString('es-UY')}</span>
                         </div>
-                        <button className="checkout-btn" onClick={handleSubmit}>
-                            <i className="bi bi-lock"></i> Confirmar pedido
+                        <button className="checkout-btn" onClick={handleContinue}>
+                            <i className="bi bi-arrow-right"></i> Continuar al pago
                         </button>
                     </div>
 
