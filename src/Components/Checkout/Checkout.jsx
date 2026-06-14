@@ -3,12 +3,14 @@ import useCheckout from '../../hooks/useCheckout'
 import './Checkout.css'
 
 const Checkout = () => {
+    // Trae toda la lógica del formulario desde el hook useCheckout
     const { cart, total, form, errors, handleChange, handleContinue } = useCheckout()
 
     return (
         <section className="checkout-section">
             <div className="checkout-inner">
 
+                {/* Botón para volver al carrito */}
                 <Link to="/carrito" className="checkout-back">
                     <i className="bi bi-arrow-left"></i> Volver al carrito
                 </Link>
@@ -18,10 +20,12 @@ const Checkout = () => {
                     <div className="checkout-form">
                         <h2 className="checkout-title">Datos de envío</h2>
 
+                        {/* Fila con nombre y apellido */}
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Nombre</label>
                                 <input name="nombre" value={form.nombre} onChange={handleChange} placeholder="Juan" />
+                                {/* Muestra el error solo si existe */}
                                 {errors.nombre && <span className="form-error">{errors.nombre}</span>}
                             </div>
                             <div className="form-group">
@@ -31,6 +35,7 @@ const Checkout = () => {
                             </div>
                         </div>
 
+                        {/* Fila con email y teléfono */}
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Email</label>
@@ -58,6 +63,7 @@ const Checkout = () => {
 
                         <h2 className="checkout-title" style={{ marginTop: '32px' }}>Método de pago</h2>
 
+                        {/* Opciones de método de pago generadas dinámicamente desde un array */}
                         <div className="payment-options">
                             {[
                                 { value: 'visa',          label: 'Visa / Mastercard', icon: 'bi-credit-card' },
@@ -67,8 +73,10 @@ const Checkout = () => {
                             ].map(opt => (
                                 <label
                                     key={opt.value}
+                                    // Agrega la clase active cuando el método está seleccionado
                                     className={`payment-option ${form.pago === opt.value ? 'active' : ''}`}
                                 >
+                                    {/* Radio oculto que maneja la selección */}
                                     <input
                                         type="radio"
                                         name="pago"
@@ -84,6 +92,7 @@ const Checkout = () => {
                         {errors.pago && <span className="form-error">{errors.pago}</span>}
                     </div>
 
+                    {/* Resumen del pedido con los productos del carrito */}
                     <div className="checkout-summary">
                         <h3 className="summary-title">Resumen del pedido</h3>
                         <div className="summary-items">
@@ -100,10 +109,12 @@ const Checkout = () => {
                                 </div>
                             ))}
                         </div>
+                        {/* Total calculado en el hook sumando el precio de cada item */}
                         <div className="summary-total">
                             <span>Total</span>
                             <span className="summary-total-price">${total.toLocaleString('es-UY')}</span>
                         </div>
+                        {/* Al clickear valida el formulario y navega a /pago si todo está ok */}
                         <button className="checkout-btn" onClick={handleContinue}>
                             <i className="bi bi-arrow-right"></i> Continuar al pago
                         </button>

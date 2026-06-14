@@ -1,52 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Camiseta Home Falcao",
-        "player": "Radamel Falcao",
-        "team": "Atlético de Madrid",
-        "year": 2013,
-        "tournament": "Temporada 2012-13",
-        "price": 4500,
-        "description": "La temporada en que el Tigre rugió más fuerte que nunca. Falcao convirtió al Atlético en una pesadilla para toda Europa con una camiseta rojiblanca que olía a gol en cada partido. Una era dorada antes de la partida.",
-        "stock": 4,
-        "sizes": [
-            { "size": "S", "stock": 1 },
-            { "size": "M", "stock": 1 },
-            { "size": "L", "stock": 1 },
-            { "size": "XL", "stock": 1 }
-        ],
-        "images": [
-            "/src/assets/Falcao-2013/Falcao-2013-frente.png",
-            "/src/assets/Falcao-2013/Falcao-2013-atras.png"
-        ],
-        "category": "clubes",
-        "confederation": "UEFA"
-    },
-    {
-        "id": 2,
-        "name": "Camiseta Home Forlan",
-        "player": "Diego Forlán",
-        "team": "Uruguay",
-        "year": 2010,
-        "tournament": "Mundial Sudáfrica 2010",
-        "price": 3900,
-        "description": "Sudáfrica 2010 fue el escenario del mejor jugador del torneo. La celeste uruguaya volvió a rugir en un mundial después de décadas y esta camiseta es el símbolo de ese regreso glorioso al podio del fútbol mundial.",
-        "stock": 5,
-        "sizes": [
-            { "size": "S", "stock": 1 },
-            { "size": "M", "stock": 1 },
-            { "size": "L", "stock": 1 },
-            { "size": "XL", "stock": 2 }
-        ],
-        "images": [
-            "/src/assets/Forlan-2010/Forlan-2010-frente.png",
-            "/src/assets/Forlan-2010/Forlan-2010-atras.png"
-        ],
-        "category": "selecciones",
-        "confederation": "CONMEBOL"
-    },
-    {
-        "id": 3,
         "name": "Camiseta Away Henry",
         "player": "Thierry Henry",
         "team": "Arsenal",
@@ -69,7 +22,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 4,
         "name": "Camiseta Home Park Ji-Sung",
         "player": "Park Ji-Sung",
         "team": "Corea del Sur",
@@ -92,7 +44,6 @@
         "confederation": "AFC"
     },
     {
-        "id": 5,
         "name": "Camiseta Away Kaka Manga Larga",
         "player": "Kaka",
         "team": "AC Milan",
@@ -115,7 +66,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 6,
         "name": "Camiseta Home Messi",
         "player": "Lionel Messi",
         "team": "FC Barcelona",
@@ -138,7 +88,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 7,
         "name": "Camiseta Home Nakata",
         "player": "Hidetoshi Nakata",
         "team": "Japón",
@@ -161,7 +110,6 @@
         "confederation": "AFC"
     },
     {
-        "id": 8,
         "name": "Camiseta Home Neymar",
         "player": "Neymar Jr.",
         "team": "Santos FC",
@@ -184,7 +132,6 @@
         "confederation": "CONMEBOL"
     },
     {
-        "id": 9,
         "name": "Camiseta Home Shearer",
         "player": "Alan Shearer",
         "team": "Newcastle United",
@@ -207,7 +154,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 10,
         "name": "Camiseta Home Zidane",
         "player": "Zinedine Zidane",
         "team": "Francia",
@@ -230,7 +176,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 11,
         "name": "Camiseta Home Cannavaro",
         "player": "Fabio Cannavaro",
         "team": "Italia",
@@ -253,7 +198,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 12,
         "name": "Camiseta Home Ronaldinho",
         "player": "Ronaldinho Gaucho",
         "team": "Brasil",
@@ -276,7 +220,6 @@
         "confederation": "CONMEBOL"
     },
     {
-        "id": 13,
         "name": "Camiseta Home Ibrahimović",
         "player": "Zlatan Ibrahimović",
         "team": "Suecia",
@@ -299,7 +242,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 14,
         "name": "Camiseta Home Suárez",
         "player": "Luis Suarez",
         "team": "Liverpool",
@@ -322,7 +264,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 15,
         "name": "Camiseta Home Cruyff",
         "player": "Johan Cruyff",
         "team": "Ajax",
@@ -345,7 +286,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 16,
         "name": "Camiseta Home Kroos",
         "player": "Toni Kroos",
         "team": "Real Madrid",
@@ -368,7 +308,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 17,
         "name": "Camiseta Home Cristiano Ronaldo",
         "player": "Cristiano Ronaldo",
         "team": "Manchester United",
@@ -391,7 +330,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 18,
         "name": "Camiseta Home Beckenbauer",
         "player": "Franz Beckenbauer",
         "team": "Alemania",
@@ -414,7 +352,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 19,
         "name": "Camiseta Home Totti",
         "player": "Francesco Totti",
         "team": "AS Roma",
@@ -437,7 +374,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 20,
         "name": "Camiseta Home Nedvěd",
         "player": "Pavel Nedvěd",
         "team": "Juventus",
@@ -460,7 +396,6 @@
         "confederation": "UEFA"
     },
     {
-        "id": 21,
         "name": "Camiseta Home Ronaldo Nazário",
         "player": "Ronaldo Nazario",
         "team": "Brasil",

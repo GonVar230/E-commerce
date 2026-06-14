@@ -3,13 +3,18 @@ import usePayment from '../../hooks/usePayment'
 import './Payment.css'
 
 const Payment = () => {
+    // Lee el estado que mandó Checkout al navegar a /pago (form y total)
     const { state } = useLocation()
+
+    // Inicializa el hook con el form recibido, si no hay state usa objeto vacío
     const { submitted, card, errors, handleCardChange, handleSubmit } = usePayment(state?.form || {})
 
+    // Si el usuario entra directamente a /pago sin pasar por checkout lo redirige
     if (!state) return <Navigate to="/checkout" replace />
 
     const { form, total } = state
 
+    // Si el pedido fue confirmado muestra la pantalla de éxito
     if (submitted) {
         return (
             <section className="payment-section">
@@ -18,6 +23,7 @@ const Payment = () => {
                         <i className="bi bi-bag-check"></i>
                     </div>
                     <h2 className="success-title">¡Pedido confirmado!</h2>
+                    {/* Muestra el nombre y email del formulario de checkout */}
                     <p className="success-desc">Gracias {form.nombre}, te enviamos los detalles a {form.email}.</p>
                     <Link to="/" className="success-btn">Volver al inicio</Link>
                 </div>
@@ -33,6 +39,7 @@ const Payment = () => {
                     <i className="bi bi-arrow-left"></i> Volver
                 </Link>
 
+                {/* Muestra el formulario de tarjeta solo si el método elegido fue visa */}
                 {form.pago === 'visa' && (
                     <>
                         <h2 className="payment-title">Datos de tu tarjeta</h2>
@@ -50,6 +57,7 @@ const Payment = () => {
                                 </div>
                                 <div className="form-group">
                                     <label>CVV</label>
+                                    {/* Solo acepta números, validado en el hook */}
                                     <input name="cvv" value={card.cvv} onChange={handleCardChange} placeholder="123" maxLength={3} />
                                     {errors.cvv && <span className="form-error">{errors.cvv}</span>}
                                 </div>
@@ -63,6 +71,7 @@ const Payment = () => {
                     </>
                 )}
 
+                {/* Si eligió MercadoPago muestra info de redirección */}
                 {form.pago === 'mercadopago' && (
                     <>
                         <h2 className="payment-title">Pagar con MercadoPago</h2>
@@ -74,6 +83,7 @@ const Payment = () => {
                     </>
                 )}
 
+                {/* Si eligió transferencia muestra los datos bancarios */}
                 {form.pago === 'transferencia' && (
                     <>
                         <h2 className="payment-title">Datos para transferencia</h2>
@@ -89,6 +99,7 @@ const Payment = () => {
                     </>
                 )}
 
+                {/* Si eligió PayPal muestra info de redirección */}
                 {form.pago === 'paypal' && (
                     <>
                         <h2 className="payment-title">Pagar con PayPal</h2>
@@ -100,6 +111,7 @@ const Payment = () => {
                     </>
                 )}
 
+                {/* Botón que valida y confirma el pedido, limpia el carrito si todo está ok */}
                 <button className="payment-btn" onClick={handleSubmit}>
                     <i className="bi bi-lock"></i> Confirmar pedido
                 </button>

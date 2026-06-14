@@ -16,8 +16,7 @@
 
 .logo { 
     display: flex; 
-    align-items: 
-    center; 
+    align-items: center; 
     gap: 10px; 
     text-decoration: none; 
     flex-shrink: 0; 
@@ -37,8 +36,8 @@
 }
 .logo-text { 
     display: flex; 
-    flex-direction: 
-    column; line-height: 1; 
+    flex-direction: column;
+    line-height: 1; 
 }
 .logo-brand { 
     color: #2FBF8A; 
@@ -114,17 +113,22 @@
 /* TABLET */
 @media (max-width: 768px) {
     .nav-link {
-        padding: 8px 10px;
-        font-size: 13px;
+        padding: 6px 6px;
+        font-size: 12px;
     }
 
-    .logo-sub {
-        display: none;
+    .bi-cart2 {
+        font-size: 16px;
     }
+
+    .logo-icon {
+        height: 30px;
+        width: 30px;
+    }
+
 }
 
-/* MOBILE */
-@media (max-width: 480px) {
+@media (max-width: 420px) {
     .navbar {
         padding: 0 16px;
     }
@@ -136,10 +140,5 @@
     .nav-link {
         padding: 8px 8px;
         font-size: 12px;
-    }
-
-    .nav-btn {
-        font-size: 18px;
-        padding: 6px;
     }
 }
