@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../Context/useCart'
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { db } from '../service/firebase'
 
 const useCheckout = () => {
     const { cart } = useCart()
@@ -13,6 +15,7 @@ const useCheckout = () => {
     })
 
     const [errors, setErrors] = useState({})
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -52,16 +55,41 @@ const useCheckout = () => {
         return newErrors
     }
 
-    const handleContinue = () => {
+    const buyerData = () => ({
+        ...form,
+        fecha: serverTimestamp()
+    })
+
+    const terminarCompra = (e) => {
+        e.preventDefault()
+
         const newErrors = validate()
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors)
             return
         }
-        navigate('/pago', { state: { form, total } })
+
+        setLoading(true)
+
+        const orderData = {
+            buyer: buyerData(),
+            items: cart,
+            total,
+        }
+
+        const ordersRef = collection(db, 'orders')
+
+        addDoc(ordersRef, orderData)
+            .then(() => {
+                navigate('/pago', { state: { form, total } })
+            })
+            .catch((error) => {
+                console.log(error)
+                setLoading(false)
+            })
     }
 
-    return { cart, total, form, errors, handleChange, handleContinue }
+    return { cart, total, form, errors, loading, handleChange, terminarCompra }
 }
 
 export default useCheckout;

@@ -1,13 +1,10 @@
 import { useCart } from '../../Context/useCart'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 import './Cart.css'
 
 const Cart = () => {
     // Trae el carrito y la función para eliminar productos del contexto
     const { cart, removeFromCart } = useCart()
-    // Para navegar a /checkout al finalizar la compra
-    const navigate = useNavigate()
 
     // Calcula el total sumando el precio de cada item del carrito
     const total = cart.reduce((acc, item) => acc + item.price, 0)
@@ -64,9 +61,9 @@ const Cart = () => {
                                 <span className="cart-total-price">${total.toLocaleString('es-UY')}</span>
                             </div>
                             {/* Navega a /checkout para completar los datos de envío y pago */}
-                            <button className="cart-checkout-btn" onClick={() => navigate('/checkout')}>
+                            <Link to="/checkout" className="cart-checkout-btn">
                                 <i className="bi bi-bag-check"></i> Finalizar compra
-                            </button>
+                            </Link>
                         </div>
                     </>
                 )}

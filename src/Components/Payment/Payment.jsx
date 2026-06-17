@@ -7,14 +7,14 @@ const Payment = () => {
     const { state } = useLocation()
 
     // Inicializa el hook con el form recibido, si no hay state usa objeto vacío
-    const { submitted, card, errors, handleCardChange, handleSubmit } = usePayment(state?.form || {})
+    const { submitted, orderId, card, errors, handleCardChange, handleSubmit } = usePayment(state?.form || {})
 
     // Si el usuario entra directamente a /pago sin pasar por checkout lo redirige
     if (!state) return <Navigate to="/checkout" replace />
 
     const { form, total } = state
 
-    // Si el pedido fue confirmado muestra la pantalla de éxito
+    // Si el pedido fue confirmado muestra la pantalla de éxito con el orderId
     if (submitted) {
         return (
             <section className="payment-section">
@@ -23,8 +23,11 @@ const Payment = () => {
                         <i className="bi bi-bag-check"></i>
                     </div>
                     <h2 className="success-title">¡Pedido confirmado!</h2>
-                    {/* Muestra el nombre y email del formulario de checkout */}
                     <p className="success-desc">Gracias {form.nombre}, te enviamos los detalles a {form.email}.</p>
+                    <div className="order-id">
+                        <span>Número de pedido</span>
+                        <strong>{orderId}</strong>
+                    </div>
                     <Link to="/" className="success-btn">Volver al inicio</Link>
                 </div>
             </section>
@@ -57,7 +60,6 @@ const Payment = () => {
                                 </div>
                                 <div className="form-group">
                                     <label>CVV</label>
-                                    {/* Solo acepta números, validado en el hook */}
                                     <input name="cvv" value={card.cvv} onChange={handleCardChange} placeholder="123" maxLength={3} />
                                     {errors.cvv && <span className="form-error">{errors.cvv}</span>}
                                 </div>
@@ -111,7 +113,6 @@ const Payment = () => {
                     </>
                 )}
 
-                {/* Botón que valida y confirma el pedido, limpia el carrito si todo está ok */}
                 <button className="payment-btn" onClick={handleSubmit}>
                     <i className="bi bi-lock"></i> Confirmar pedido
                 </button>

@@ -4,6 +4,7 @@ import { useCart } from '../Context/useCart'
 const usePayment = (form) => {
     const { clearCart } = useCart()
     const [submitted, setSubmitted] = useState(false)
+    const [orderId, setOrderId] = useState(null)
     const [card, setCard] = useState({ numero: '', vencimiento: '', cvv: '', titular: '' })
     const [errors, setErrors] = useState({})
 
@@ -31,6 +32,13 @@ const usePayment = (form) => {
         return newErrors
     }
 
+    const generateOrderId = () => {
+        // Genera un ID único combinando la fecha y un número aleatorio
+        const timestamp = Date.now().toString(36).toUpperCase()
+        const random = Math.random().toString(36).substring(2, 6).toUpperCase()
+        return `ORD-${timestamp}-${random}`
+    }
+
     const handleSubmit = () => {
         if (form.pago === 'visa') {
             const newErrors = validateCard()
@@ -40,10 +48,11 @@ const usePayment = (form) => {
             }
         }
         clearCart()
+        setOrderId(generateOrderId())
         setSubmitted(true)
     }
 
-    return { submitted, card, errors, handleCardChange, handleSubmit }
+    return { submitted, orderId, card, errors, handleCardChange, handleSubmit }
 }
 
 export default usePayment;

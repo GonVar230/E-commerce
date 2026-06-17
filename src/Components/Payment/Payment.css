@@ -210,3 +210,25 @@
 .success-btn:hover { 
     background: #1A9E6E; 
 }
+
+.order-id {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.order-id span {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.order-id strong {
+    color: #2FBF8A;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
