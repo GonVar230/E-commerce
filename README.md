@@ -1,16 +1,65 @@
-# React + Vite
+# 🏆 Vintage Jerseys
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce de camisetas de fútbol vintage desarrollado con React y Firebase.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 Descripción del proyecto
 
-## React Compiler
+Vintage Jerseys es una tienda online de camisetas de fútbol vintage que permite explorar, filtrar y comprar camisetas históricas de selecciones y clubes de todo el mundo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Herramientas utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — Biblioteca principal para la construcción de la interfaz
+- **Vite** — Bundler y entorno de desarrollo
+- **React Router DOM** — Navegación y rutas de la aplicación
+- **Firebase / Firestore** — Base de datos para productos y órdenes
+- **Bootstrap Icons** — Iconografía de la interfaz
+- **Context API** — Manejo del estado global del carrito
+- **Custom Hooks** — Separación de lógica de los componentes
+
+---
+
+## 🚀 Instalación y uso
+
+Este proyecto usa variables de entorno para Firebase. Creá un `.env` en la raíz con:
+
+```env
+VITE_FIREBASE_API_KEY=tu_api_key
+VITE_FIREBASE_AUTH_DOMAIN=tu_auth_domain
+VITE_FIREBASE_PROJECT_ID=tu_project_id
+VITE_FIREBASE_STORAGE_BUCKET=tu_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=tu_messaging_sender_id
+VITE_FIREBASE_APP_ID=tu_app_id
+```
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## ✨ Funcionalidades
+
+- 🔍 Búsqueda por jugador o equipo con sugerencias en tiempo real
+- 🗂️ Filtro por categoría y confederación
+- 🛒 Carrito con control de stock por talle
+- 💳 Simulación de métodos de pago (Visa, MercadoPago, Transferencia, PayPal)
+- 🔥 Integración con Firebase Firestore
+
+---
+
+## 👤 Autor
+
+**Gonzalo Varela**  
+GitHub: [@GonVar230](https://github.com/GonVar230)  
+Repositorio: [https://github.com/GonVar230/E-commerce](https://github.com/GonVar230/E-commerce)
+
+---
+
+## 📄 Licencia
+
+Proyecto desarrollado con fines educativos para CoderHouse.
