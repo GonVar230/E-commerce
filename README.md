@@ -37,9 +37,31 @@ src/
 
 ---
 
-## 🚀 Installation & Usage
+## 🚀 Getting Started
 
-This project uses environment variables for Firebase. Create a `.env` file in the root with:
+Follow these steps to run the project locally.
+
+### 📥 1. Clone the repository
+
+```bash
+git clone https://github.com/GonVar230/E-commerce.git
+```
+
+### 📂 2. Navigate to the project directory
+
+```bash
+cd E-commerce
+```
+
+### 📦 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 🔥 4. Configure Firebase
+
+Create a `.env` file in the root directory and add your Firebase credentials:
 
 ```env
 VITE_FIREBASE_API_KEY=your_api_key
@@ -50,10 +72,26 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
 ```
 
+> ⚠️ You must create your own Firebase project and replace these values with your credentials.
+
+### ▶️ 5. Run the development server
+
 ```bash
-npm install
 npm run dev
 ```
+
+### 🌐 6. Open the application
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+```
+
+### 🛠 Requirements
+
+- Node.js (v18 or higher recommended)
+- npm
 
 ---
 
