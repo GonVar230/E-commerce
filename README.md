@@ -24,6 +24,7 @@ Vintage Jerseys is an online store for vintage football jerseys that allows user
 
 ## 📁 Project Structure
 src/
+
 ├── Components/     # UI components (Cart, Checkout, Payment, NavBar, etc.)
 
 ├── Context/        # CartContext and useCart hook
