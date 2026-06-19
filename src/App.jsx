@@ -12,29 +12,26 @@ import Cart from './Components/Cart/Cart'
 import Checkout from './Components/Checkout/Checkout'
 import Payment from './Components/Payment/Payment'
 
-
 function App() {
-  return (
-    <>
-      <TopBar />
-      <NavBar />
-      
-      <Routes>
-        <Route path="/" element={<><Home /></>  } />
-        <Route path="/productos" element={<ItemListContainer />} />
-        <Route path="/productos/:id" element={<ItemDetailContainer />} />
-        <Route path="/ayuda" element={<><Help /></>} />
-        <Route path="/carrito" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/pago" element={<Payment />} />
-        <Route path="/*" element={<> <NotFound /> </> } />
-      </Routes>
+    return (
+        <>
+            <TopBar />
+            <NavBar />
 
-      <Footer />
-    </>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/productos" element={<ItemListContainer />} />
+                <Route path="/productos/:id" element={<ItemDetailContainer />} />
+                <Route path="/ayuda" element={<Help />} />
+                <Route path="/carrito" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/pago" element={<Payment />} />
+                <Route path="/*" element={<NotFound />} />
+            </Routes>
 
-    
-  )
+            <Footer />
+        </>
+    )
 }
 
-export default App
+export default App;

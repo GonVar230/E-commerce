@@ -3,7 +3,7 @@ import useCheckout from '../../hooks/useCheckout'
 import './Checkout.css'
 
 const Checkout = () => {
-    const { cart, total, form, errors, loading, handleChange, terminarCompra } = useCheckout()
+    const { cart, total, loading, register, errors, pagoSeleccionado, onSubmit } = useCheckout()
 
     return (
         <section className="checkout-section">
@@ -15,45 +15,101 @@ const Checkout = () => {
 
                 <div className="checkout-grid">
 
-                    <form className="checkout-form" onSubmit={terminarCompra}>
+                    <form className="checkout-form" onSubmit={onSubmit}>
                         <h2 className="checkout-title">Datos de envío</h2>
 
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Nombre</label>
-                                <input name="nombre" value={form.nombre} onChange={handleChange} placeholder="Juan" />
-                                {errors.nombre && <span className="form-error">{errors.nombre}</span>}
+                                <input
+                                    placeholder="Juan"
+                                    {...register('nombre', {
+                                        required: 'Campo requerido',
+                                        pattern: {
+                                            value: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/,
+                                            message: 'Solo letras'
+                                        }
+                                    })}
+                                />
+                                {errors.nombre && <span className="form-error">{errors.nombre.message}</span>}
                             </div>
                             <div className="form-group">
                                 <label>Apellido</label>
-                                <input name="apellido" value={form.apellido} onChange={handleChange} placeholder="García" />
-                                {errors.apellido && <span className="form-error">{errors.apellido}</span>}
+                                <input
+                                    placeholder="García"
+                                    {...register('apellido', {
+                                        required: 'Campo requerido',
+                                        pattern: {
+                                            value: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/,
+                                            message: 'Solo letras'
+                                        }
+                                    })}
+                                />
+                                {errors.apellido && <span className="form-error">{errors.apellido.message}</span>}
                             </div>
                         </div>
 
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Email</label>
-                                <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="juan@email.com" />
-                                {errors.email && <span className="form-error">{errors.email}</span>}
+                                <input
+                                    type="email"
+                                    placeholder="juan@email.com"
+                                    {...register('email', {
+                                        required: 'Campo requerido',
+                                        pattern: {
+                                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                            message: 'Email inválido'
+                                        }
+                                    })}
+                                />
+                                {errors.email && <span className="form-error">{errors.email.message}</span>}
                             </div>
                             <div className="form-group">
                                 <label>Teléfono</label>
-                                <input name="telefono" value={form.telefono} onChange={handleChange} placeholder="+598 99 000 000" />
-                                {errors.telefono && <span className="form-error">{errors.telefono}</span>}
+                                <input
+                                    placeholder="+598 99 000 000"
+                                    {...register('telefono', {
+                                        required: 'Campo requerido',
+                                        minLength: { value: 8, message: 'Teléfono inválido' },
+                                        pattern: {
+                                            value: /^\d*$/,
+                                            message: 'Solo números'
+                                        }
+                                    })}
+                                />
+                                {errors.telefono && <span className="form-error">{errors.telefono.message}</span>}
                             </div>
                         </div>
 
                         <div className="form-group">
                             <label>Dirección</label>
-                            <input name="direccion" value={form.direccion} onChange={handleChange} placeholder="Av. Brasil" />
-                            {errors.direccion && <span className="form-error">{errors.direccion}</span>}
+                            <input
+                                placeholder="Av. Brasil"
+                                {...register('direccion', {
+                                    required: 'Campo requerido',
+                                    pattern: {
+                                        value: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]*$/,
+                                        message: 'Dirección inválida'
+                                    }
+                                })}
+                            />
+                            {errors.direccion && <span className="form-error">{errors.direccion.message}</span>}
                         </div>
 
                         <div className="form-group">
                             <label>Ciudad</label>
-                            <input name="ciudad" value={form.ciudad} onChange={handleChange} placeholder="Montevideo" />
-                            {errors.ciudad && <span className="form-error">{errors.ciudad}</span>}
+                            <input
+                                placeholder="Montevideo"
+                                {...register('ciudad', {
+                                    required: 'Campo requerido',
+                                    pattern: {
+                                        value: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/,
+                                        message: 'Solo letras'
+                                    }
+                                })}
+                            />
+                            {errors.ciudad && <span className="form-error">{errors.ciudad.message}</span>}
                         </div>
 
                         <h2 className="checkout-title" style={{ marginTop: '32px' }}>Método de pago</h2>
@@ -67,23 +123,20 @@ const Checkout = () => {
                             ].map(opt => (
                                 <label
                                     key={opt.value}
-                                    className={`payment-option ${form.pago === opt.value ? 'active' : ''}`}
+                                    className={`payment-option ${pagoSeleccionado === opt.value ? 'active' : ''}`}
                                 >
                                     <input
                                         type="radio"
-                                        name="pago"
                                         value={opt.value}
-                                        checked={form.pago === opt.value}
-                                        onChange={handleChange}
+                                        {...register('pago', { required: 'Seleccioná un método de pago' })}
                                     />
                                     <i className={`bi ${opt.icon}`}></i>
                                     <span>{opt.label}</span>
                                 </label>
                             ))}
                         </div>
-                        {errors.pago && <span className="form-error">{errors.pago}</span>}
+                        {errors.pago && <span className="form-error">{errors.pago.message}</span>}
 
-                        {/* Mientras carga muestra el spinner, si no muestra el texto normal */}
                         <button
                             type="submit"
                             className="checkout-btn"

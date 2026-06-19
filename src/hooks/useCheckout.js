@@ -1,95 +1,43 @@
 import { useState } from 'react'
+import { useForm, useWatch } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../Context/useCart'
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../service/firebase'
 
 const useCheckout = () => {
     const { cart } = useCart()
     const navigate = useNavigate()
     const total = cart.reduce((acc, item) => acc + item.price, 0)
-
-    const [form, setForm] = useState({
-        nombre: '', apellido: '', email: '',
-        telefono: '', direccion: '', ciudad: '', pago: ''
-    })
-
-    const [errors, setErrors] = useState({})
     const [loading, setLoading] = useState(false)
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
-
-        if (name === 'nombre' || name === 'apellido' || name === 'ciudad') {
-            if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(value)) return
+    const {
+        register,
+        handleSubmit,
+        control,
+        formState: { errors }
+    } = useForm({
+        defaultValues: {
+            nombre: '', apellido: '', email: '',
+            telefono: '', direccion: '', ciudad: '', pago: ''
         }
-
-        if (name === 'telefono') {
-            if (!/^\d*$/.test(value)) return
-        }
-
-        if (name === 'direccion') {
-            if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]*$/.test(value)) return
-        }
-
-        setForm({ ...form, [name]: value })
-        setErrors({ ...errors, [name]: '' })
-    }
-
-    const validate = () => {
-        const newErrors = {}
-        if (!form.nombre)
-            newErrors.nombre    = 'Campo requerido'
-        if (!form.apellido)
-            newErrors.apellido  = 'Campo requerido'
-        if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-            newErrors.email     = 'Email inválido'
-        if (!form.telefono || form.telefono.length < 8)
-            newErrors.telefono  = 'Teléfono inválido'
-        if (!form.direccion)
-            newErrors.direccion = 'Campo requerido'
-        if (!form.ciudad)
-            newErrors.ciudad    = 'Campo requerido'
-        if (!form.pago)
-            newErrors.pago      = 'Seleccioná un método de pago'
-        return newErrors
-    }
-
-    const buyerData = () => ({
-        ...form,
-        fecha: serverTimestamp()
     })
 
-    const terminarCompra = (e) => {
-        e.preventDefault()
+    const pagoSeleccionado = useWatch({ control, name: 'pago' })
 
-        const newErrors = validate()
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors)
-            return
-        }
-
+    // Solo valida el formulario y navega a /pago, no toca Firebase todavía
+    const continuarAlPago = (formValues) => {
         setLoading(true)
-
-        const orderData = {
-            buyer: buyerData(),
-            items: cart,
-            total,
-        }
-
-        const ordersRef = collection(db, 'orders')
-
-        addDoc(ordersRef, orderData)
-            .then(() => {
-                navigate('/pago', { state: { form, total } })
-            })
-            .catch((error) => {
-                console.log(error)
-                setLoading(false)
-            })
+        navigate('/pago', { state: { form: formValues, total } })
     }
 
-    return { cart, total, form, errors, loading, handleChange, terminarCompra }
+    return {
+        cart,
+        total,
+        loading,
+        register,
+        errors,
+        pagoSeleccionado,
+        onSubmit: handleSubmit(continuarAlPago)
+    }
 }
 
 export default useCheckout;
