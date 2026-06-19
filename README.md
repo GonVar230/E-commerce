@@ -1,16 +1,118 @@
-# React + Vite
+# 🏆 Vintage Jerseys
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce of vintage football jerseys built with React and Firebase.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 Project Description
 
-## React Compiler
+Vintage Jerseys is an online store for vintage football jerseys that allows users to explore, filter and purchase historical jerseys from iconic national teams and clubs around the world.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tools & Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — Main library for building the UI
+- **Vite** — Bundler and development environment
+- **React Router DOM** — Navigation and routing
+- **Firebase / Firestore** — Database for products and orders
+- **Bootstrap Icons** — UI iconography
+- **Context API** — Global cart state management
+- **Custom Hooks** — Business logic separation from components
+
+---
+
+## 📁 Project Structure
+src/
+
+├── Components/     # UI components (Cart, Checkout, Payment, NavBar, etc.)
+
+├── Context/        # CartContext and useCart hook
+
+├── hooks/          # Custom hooks (useCheckout, useItemDetail, usePayment, useSearchBar)
+
+├── service/        # Firebase configuration
+
+└── App.jsx         # Main app with routes
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### 📥 1. Clone the repository
+
+```bash
+git clone https://github.com/GonVar230/E-commerce.git
+```
+
+### 📂 2. Navigate to the project directory
+
+```bash
+cd E-commerce
+```
+
+### 📦 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 🔥 4. Configure Firebase
+
+Create a `.env` file in the root directory and add your Firebase credentials:
+
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+
+> ⚠️ You must create your own Firebase project and replace these values with your credentials.
+
+### ▶️ 5. Run the development server
+
+```bash
+npm run dev
+```
+
+### 🌐 6. Open the application
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+```
+
+### 🛠 Requirements
+
+- Node.js (v18 or higher recommended)
+- npm
+
+---
+
+## ✨ Features
+
+- 🔍 Real-time search by player or team with suggestions
+- 🗂️ Filter by category and confederation
+- 🛒 Shopping cart with stock control per size
+- 💳 Payment simulation (Visa, MercadoPago, Bank Transfer, PayPal)
+- 🔥 Firebase Firestore integration for products and orders
+
+---
+
+## 👤 Author
+
+**Gonzalo Varela**  
+GitHub: [@GonVar230](https://github.com/GonVar230)  
+Repository: [https://github.com/GonVar230/E-commerce](https://github.com/GonVar230/E-commerce)
+
+---
+
+## 📄 License
+
+Project developed for educational purposes at CoderHouse.
