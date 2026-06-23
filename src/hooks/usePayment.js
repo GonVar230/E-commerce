@@ -34,7 +34,13 @@ const usePayment = (form, total) => {
     const confirmarPedido = useCallback(() => {
         const orderData = {
             buyer: buyerData(),
-            items: cart,
+            items: cart.map(item => ({
+            id: item.id,
+            name: item.name,
+            size: item.size,
+            quantity: item.quantity,
+            price: item.price,
+        })),
             total,
         }
 
